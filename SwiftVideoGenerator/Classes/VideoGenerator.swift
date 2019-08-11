@@ -1260,7 +1260,7 @@ public class VideoGenerator: NSObject {
         context.draw(cgImage, in: CGRect(x: center.x, y: center.y, width: imageWidth, height: imageHeight))
       }
       
-      let newPixelBuffer = pixelData.bindMemory(to: RGBA32.self, capacity: Int(imageWidth) * Int(imageHeight))
+      let newPixelBuffer = pixelData!.bindMemory(to: RGBA32.self, capacity: Int(imageWidth) * Int(imageHeight))
         
         for row in 0 ..< Int(imageWidth) {
             for column in 0 ..< Int(imageHeight) {
